@@ -3,7 +3,7 @@ html(lang='pt-br')
   head
     meta(charset='utf-8')
     meta(name='description', content='Semana de eventos front-end em São Paulo - Edição 2018')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='format-detection', content='telephone=no')
 
     //- Title
@@ -25,14 +25,13 @@ html(lang='pt-br')
         span.main__text__date
           | De 10 a 14 de julho
 
-      form.main__mailbox(action="" method="" name="mail-catcher")
-
-        label.main__mailbox__label.main__mailbox__email(for="email")
+      form.main__mailbox(action='//frontenweek.us15.list-manage.com/subscribe/post?u=2860ce27ad9d262ab2dcf4791&amp;id=f49f68165e' method='post' id='newsletter-subscribe' name='mc-embedded-subscribe-form' class='validate subscribe-form' target='_blank' novalidate='true')
+        label.main__mailbox__label.main__mailbox__email.submit-msg(for='email')
           | Inscreva-se para mais informações e novidades!
-        
-        input.main__mailbox__input.main__mailbox__email(placeholder="E-mail" id="email"  type="email" maxlength="70" name="" required)
 
-        button.main__mailbox__button.main__mailbox__send(type="submit")
+        input.main__mailbox__input.main__mailbox__email(placeholder='E-mail' id='mce-EMAIL' name='EMAIL' type='email' maxlength='70' name='' required)
+
+        button.main__mailbox__button.main__mailbox__send(type='submit' id='mc-embedded-subscribe' name='subscribe')
           img.main__mailbox__send__img(src='assets/img/send_arrow.svg', alt='Enviar')
 
 
@@ -41,7 +40,7 @@ html(lang='pt-br')
         | Programação
 
       .sidebar__days
-        
+
         .sidebar__days__single-day
           .sidebar__days__single-day__header
             h3.sidebar__days_monday__title
@@ -82,7 +81,7 @@ html(lang='pt-br')
             .sidebar__days__single-day__meetup__color.sidebar__days__single-day__meetup__color_React-SP
             span.sidebar__days__single-day__meetup__title
               | React SP
-          
+
         .sidebar__days__single-day
           .sidebar__days__single-day__header
             h3.sidebar__days_monday__title
@@ -105,7 +104,9 @@ html(lang='pt-br')
 
     //- JS scripts
     //- ===================================
-    script(async, src='assets/js/index.min.js')
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/jquery.ajaxchimp.js')
+    script(src='assets/js/index.min.js')
 
   //- Stylesheet and fonts
   //- ===================================
